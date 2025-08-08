@@ -1,0 +1,207 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import '/resources/colors.dart';
+
+class AppThemes {
+  static final lightTheme = ThemeData(
+      primaryColor: AppColors.lightBlue,
+      fontFamily: 'Poppins',
+      brightness: Brightness.light,
+      scaffoldBackgroundColor: AppColors.white,
+      canvasColor: AppColors.lightGrey,
+      primaryTextTheme: lightTextTheme,
+      appBarTheme: const AppBarTheme(
+        shadowColor: Colors.transparent,
+        elevation: 0.0,
+        centerTitle: true,
+        color: AppColors.lightGrey,
+        titleTextStyle: TextStyle(
+          color: AppColors.black,
+          fontSize: 20.0,
+          fontWeight: FontWeight.normal,
+        ),
+        systemOverlayStyle: SystemUiOverlayStyle(
+          statusBarColor: Colors.transparent,
+          statusBarIconBrightness: Brightness.light,
+          statusBarBrightness: Brightness.dark,
+        ),
+      ));
+
+  static final darkTheme = ThemeData(
+      primaryColor: AppColors.darkBlue,
+      brightness: Brightness.dark,
+      fontFamily: 'Poppins',
+      scaffoldBackgroundColor: AppColors.black,
+      canvasColor: AppColors.darkGrey,
+      primaryTextTheme: darkTextTheme,
+      appBarTheme: const AppBarTheme(
+        shadowColor: Colors.transparent,
+        elevation: 0.0,
+        centerTitle: true,
+        color: AppColors.darkGrey,
+        titleTextStyle: TextStyle(
+          color: AppColors.white,
+          fontSize: 20.0,
+          fontWeight: FontWeight.normal,
+        ),
+        systemOverlayStyle: SystemUiOverlayStyle(
+          statusBarColor: Colors.transparent,
+          statusBarIconBrightness: Brightness.dark,
+          statusBarBrightness: Brightness.light,
+        ),
+      ));
+}
+
+const darkTextTheme = TextTheme(
+    displayLarge: TextStyle(
+        color: AppColors.lightGrey,
+        fontSize: 96,
+        fontWeight: FontWeight.w200,
+        wordSpacing: -1.5),
+    displayMedium: TextStyle(
+        color: AppColors.lightGrey,
+        fontSize: 60,
+        fontWeight: FontWeight.w200,
+        wordSpacing: -0.5),
+    displaySmall: TextStyle(
+        color: AppColors.lightGrey,
+        fontSize: 48,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 0),
+    headlineLarge: TextStyle(
+        color: AppColors.lightGrey,
+        fontSize: 38,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 0.25),
+    headlineMedium: TextStyle(
+        color: AppColors.lightGrey,
+        fontSize: 34,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 0.25),
+    headlineSmall: TextStyle(
+        color: AppColors.lightGrey,
+        fontSize: 24,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 0),
+    titleLarge: TextStyle(
+        color: AppColors.lightGrey,
+        fontSize: 20,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 0.15),
+    titleMedium: TextStyle(
+        color: AppColors.lightGrey,
+        fontSize: 16,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 0.15),
+    titleSmall: TextStyle(
+        color: AppColors.lightGrey,
+        fontSize: 14,
+        fontWeight: FontWeight.w200,
+        wordSpacing: -1.5),
+    bodyLarge: TextStyle(
+        color: AppColors.lightGrey,
+        fontSize: 16,
+        fontWeight: FontWeight.w200,
+        wordSpacing: -1.5),
+    bodyMedium: TextStyle(
+        color: AppColors.lightGrey,
+        fontSize: 14,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 0.25),
+    bodySmall: TextStyle(
+        color: AppColors.lightGrey,
+        fontSize: 12,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 0.4),
+    labelLarge: TextStyle(
+        color: AppColors.lightGrey,
+        fontSize: 14,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 1.25),
+    labelMedium: TextStyle(
+        color: AppColors.lightGrey,
+        fontSize: 12,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 1.15),
+    labelSmall: TextStyle(
+        color: AppColors.lightGrey,
+        fontSize: 10,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 1.5));
+
+const lightTextTheme = TextTheme(
+    displayLarge: TextStyle(
+        color: AppColors.black,
+        fontSize: 96,
+        fontWeight: FontWeight.w200,
+        wordSpacing: -1.5),
+    displayMedium: TextStyle(
+        color: AppColors.black,
+        fontSize: 60,
+        fontWeight: FontWeight.w200,
+        wordSpacing: -0.5),
+    displaySmall: TextStyle(
+        color: AppColors.black,
+        fontSize: 48,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 0),
+    headlineLarge: TextStyle(
+        color: AppColors.black,
+        fontSize: 38,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 0.25),
+    headlineMedium: TextStyle(
+        color: AppColors.black,
+        fontSize: 34,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 0.25),
+    headlineSmall: TextStyle(
+        color: AppColors.black,
+        fontSize: 24,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 0),
+    titleLarge: TextStyle(
+        color: AppColors.black,
+        fontSize: 20,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 0.15),
+    titleMedium: TextStyle(
+        color: AppColors.black,
+        fontSize: 16,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 0.15),
+    titleSmall: TextStyle(
+        color: AppColors.black,
+        fontSize: 14,
+        fontWeight: FontWeight.w200,
+        wordSpacing: -1.5),
+    bodyLarge: TextStyle(
+        color: AppColors.black,
+        fontSize: 16,
+        fontWeight: FontWeight.w200,
+        wordSpacing: -1.5),
+    bodyMedium: TextStyle(
+        color: AppColors.black,
+        fontSize: 14,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 0.25),
+    bodySmall: TextStyle(
+        color: AppColors.black,
+        fontSize: 12,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 0.4),
+    labelLarge: TextStyle(
+        color: AppColors.black,
+        fontSize: 14,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 1.25),
+    labelMedium: TextStyle(
+        color: AppColors.black,
+        fontSize: 12,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 1.15),
+    labelSmall: TextStyle(
+        color: AppColors.black,
+        fontSize: 10,
+        fontWeight: FontWeight.w200,
+        wordSpacing: 1.5));
