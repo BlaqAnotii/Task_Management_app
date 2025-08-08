@@ -253,10 +253,19 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: const Color(0xffFAFAFA),
       appBar: AppBar(
+        leadingWidth: 100,
         backgroundColor: AppColors.white,
         toolbarHeight: 50,
         elevation: 0,
-        centerTitle: false,
+        leading: const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Text(
+            'Netspin',
+            style: TextStyle(
+                fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+        ),
+        centerTitle: true,
         title: RichText(
           text: TextSpan(
             children: [
